@@ -162,7 +162,16 @@ Petra Cingra 482<br/>
     
     //replace @var with values
     $message = str_replace(array_keys($paymentData), array_values($paymentData), $message);
-    
+    include "phpqrcode/qrlib.php";
+    $tmpdir = "tmp";
+    $filename = $databaseData['token'].".png";
+    $relPath = $tmpdir."/".$filename;
+    $absPath = "http://www.samorlova./..........".$filename;
+    QRcode::png($databaseData['token'], $relPath, "H", 10, 2);
+    $message .= '<br>';
+    $message .= 'Váš QR kód pro výdej jídla a identifikaci:<br>';
+    $message .='<img src="$absPath"/>';
+    $message .= '<br>';
     $headers = [
         'Content-Type: text/html; charset=UTF-8',
         'From: SAM Přihlášky <prihlasky@samorlova.cz>',
