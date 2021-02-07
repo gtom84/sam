@@ -16,8 +16,8 @@
 	$day = date("D");
 	$hour = date("H");
 	if($hour > 7 AND $hour < 11){ $i2 = 0; }
-	if($hour >= 11 AND $hour < 15){ $i2 = 1; }
-	if($hour >= 17 AND $hour < 20){ $i2 = 2; }
+	if($hour >= 11 AND $hour < 17){ $i2 = 1; }
+	if($hour >= 17 AND $hour < 21){ $i2 = 2; }
 	switch($day){
 		case "Thu":
 			$i1 = 0;
