@@ -1,7 +1,7 @@
 <?php
 
-	DB_USERNAME = "";
-	DB_PASSWORD = "";
-	DB_NAME = "";
+	const DB_USERNAME = "";
+	const DB_PASSWORD = "";
+	const DB_NAME = "";
 	
 ?>
