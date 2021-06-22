@@ -2,7 +2,7 @@
 
 require_once './bootstrap.php';
 
-if(!isset($_SERVER['X-Requested-With']) || $_SERVER['X-Requested-With'] !== ACCESS_KEY){
+if(!isset($_REQUEST['token']) || $_REQUEST['token'] !== ACCESS_KEY){
     header('HTTP/1.0 403 Forbidden');
     exit;
 }
